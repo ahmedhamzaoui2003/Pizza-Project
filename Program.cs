@@ -16,7 +16,7 @@ namespace Pizza_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPizzaMain());
+            Application.Run(new frmNewPizza());
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -98,6 +99,10 @@ namespace Pizza_Project
             bool isFirstElement = true;
             foreach(CheckBox chk in CheckBoxes)
             {
+                // Escape when the number of character ',' reachs to the half.
+                if (result.Count(c=> c == ',') == 3)
+                    result += "\n";
+
                 if (isFirstElement && chk.Checked)
                 {
                     result += chk.Text;
@@ -176,13 +181,13 @@ namespace Pizza_Project
 
             if(MessageBox.Show("Confirm Order","Confirm",MessageBoxButtons.OKCancel,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
-                if(MessageBox.Show("Order placed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
-                {
+                MessageBox.Show("Order placed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gbMenue.Enabled = false;
                     btnOrder.Enabled = false;
-                }
-            }
-            
+            }else
+                MessageBox.Show("Update Your Order", "Update", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
         }
 
         // Default Controls :

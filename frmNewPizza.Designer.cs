@@ -1,6 +1,6 @@
 ﻿namespace Pizza_Project
 {
-    partial class frmPizzaMain
+    partial class frmNewPizza
     {
         /// <summary>
         /// Required designer variable.
@@ -105,6 +105,7 @@
             // rbEatIn
             // 
             this.rbEatIn.AutoSize = true;
+            this.rbEatIn.Checked = true;
             this.rbEatIn.Location = new System.Drawing.Point(28, 32);
             this.rbEatIn.Name = "rbEatIn";
             this.rbEatIn.Size = new System.Drawing.Size(53, 17);
@@ -148,6 +149,7 @@
             this.chkGreepPeppers.Name = "chkGreepPeppers";
             this.chkGreepPeppers.Size = new System.Drawing.Size(97, 17);
             this.chkGreepPeppers.TabIndex = 5;
+            this.chkGreepPeppers.Tag = "5";
             this.chkGreepPeppers.Text = "Green Peppers";
             this.chkGreepPeppers.UseVisualStyleBackColor = true;
             this.chkGreepPeppers.CheckedChanged += new System.EventHandler(this.chkGreepPeppers_CheckedChanged);
@@ -159,6 +161,7 @@
             this.chkOnion.Name = "chkOnion";
             this.chkOnion.Size = new System.Drawing.Size(54, 17);
             this.chkOnion.TabIndex = 4;
+            this.chkOnion.Tag = "5";
             this.chkOnion.Text = "Onion";
             this.chkOnion.UseVisualStyleBackColor = true;
             this.chkOnion.CheckedChanged += new System.EventHandler(this.chkOnion_CheckedChanged);
@@ -170,6 +173,7 @@
             this.chkOlives.Name = "chkOlives";
             this.chkOlives.Size = new System.Drawing.Size(55, 17);
             this.chkOlives.TabIndex = 3;
+            this.chkOlives.Tag = "5";
             this.chkOlives.Text = "Olives";
             this.chkOlives.UseVisualStyleBackColor = true;
             this.chkOlives.CheckedChanged += new System.EventHandler(this.chkOlives_CheckedChanged);
@@ -181,6 +185,7 @@
             this.chkTomatoes.Name = "chkTomatoes";
             this.chkTomatoes.Size = new System.Drawing.Size(73, 17);
             this.chkTomatoes.TabIndex = 2;
+            this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
             this.chkTomatoes.CheckedChanged += new System.EventHandler(this.chkTomatoes_CheckedChanged);
@@ -192,6 +197,7 @@
             this.chkMushrooms.Name = "chkMushrooms";
             this.chkMushrooms.Size = new System.Drawing.Size(80, 17);
             this.chkMushrooms.TabIndex = 1;
+            this.chkMushrooms.Tag = "5";
             this.chkMushrooms.Text = "Mushrooms";
             this.chkMushrooms.UseVisualStyleBackColor = true;
             this.chkMushrooms.CheckedChanged += new System.EventHandler(this.chkMushrooms_CheckedChanged);
@@ -203,6 +209,7 @@
             this.chkExtraCheese.Name = "chkExtraCheese";
             this.chkExtraCheese.Size = new System.Drawing.Size(89, 17);
             this.chkExtraCheese.TabIndex = 0;
+            this.chkExtraCheese.Tag = "5";
             this.chkExtraCheese.Text = "Extra Cheese";
             this.chkExtraCheese.UseVisualStyleBackColor = true;
             this.chkExtraCheese.CheckedChanged += new System.EventHandler(this.chkExtraCheese_CheckedChanged);
@@ -221,11 +228,13 @@
             // rbThin
             // 
             this.rbThin.AutoSize = true;
+            this.rbThin.Checked = true;
             this.rbThin.Location = new System.Drawing.Point(28, 32);
             this.rbThin.Name = "rbThin";
             this.rbThin.Size = new System.Drawing.Size(73, 17);
             this.rbThin.TabIndex = 2;
             this.rbThin.TabStop = true;
+            this.rbThin.Tag = "10";
             this.rbThin.Text = "Thin Crust";
             this.rbThin.UseVisualStyleBackColor = true;
             this.rbThin.CheckedChanged += new System.EventHandler(this.rbThin_CheckedChanged);
@@ -238,6 +247,7 @@
             this.rbThick.Size = new System.Drawing.Size(79, 17);
             this.rbThick.TabIndex = 3;
             this.rbThick.TabStop = true;
+            this.rbThick.Tag = "20";
             this.rbThick.Text = "Thick Crust";
             this.rbThick.UseVisualStyleBackColor = true;
             this.rbThick.CheckedChanged += new System.EventHandler(this.rbThick_CheckedChanged);
@@ -262,6 +272,7 @@
             this.rbLarge.Size = new System.Drawing.Size(52, 17);
             this.rbLarge.TabIndex = 4;
             this.rbLarge.TabStop = true;
+            this.rbLarge.Tag = "30";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
             this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
@@ -269,11 +280,13 @@
             // rbSmall
             // 
             this.rbSmall.AutoSize = true;
+            this.rbSmall.Checked = true;
             this.rbSmall.Location = new System.Drawing.Point(28, 32);
             this.rbSmall.Name = "rbSmall";
             this.rbSmall.Size = new System.Drawing.Size(50, 17);
             this.rbSmall.TabIndex = 2;
             this.rbSmall.TabStop = true;
+            this.rbSmall.Tag = "10";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
@@ -286,6 +299,7 @@
             this.rbMedium.Size = new System.Drawing.Size(62, 17);
             this.rbMedium.TabIndex = 3;
             this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "20";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
             this.rbMedium.CheckedChanged += new System.EventHandler(this.rbMedium_CheckedChanged);
@@ -428,7 +442,7 @@
             this.lbSizeTitle.TabIndex = 0;
             this.lbSizeTitle.Text = "Size :";
             // 
-            // frmPizzaMain
+            // frmNewPizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -438,8 +452,9 @@
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.gbMenue);
             this.Controls.Add(this.lbTitle);
-            this.Name = "frmPizzaMain";
+            this.Name = "frmNewPizza";
             this.Text = "Pizza App";
+            this.Load += new System.EventHandler(this.frmNewPizza_Load);
             this.gbMenue.ResumeLayout(false);
             this.gbWhereToEat.ResumeLayout(false);
             this.gbWhereToEat.PerformLayout();

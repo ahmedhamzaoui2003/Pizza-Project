@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmNewPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPizza.Designer.cs">
+      <DependentUpon>frmNewPizza.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPizzaMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmNewPizza.resx">
+      <DependentUpon>frmNewPizza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPizzaMain.resx">
       <DependentUpon>frmPizzaMain.cs</DependentUpon>
     </EmbeddedResource>
