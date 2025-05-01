@@ -81,7 +81,7 @@ namespace Pizza_Project
             }
             if(chkGreepPeppers.Checked)
             {
-                sToppings += ", Green Peppers";
+                sToppings += ", Green Peppers.";
             }
 
             if (sToppings.StartsWith(","))
@@ -238,16 +238,33 @@ namespace Pizza_Project
             UpdateOrderSummary();
         }
 
+
+        // Notification when the user click on the "Order" button :
+        private void ShowNotifyIcon(string Title , string Text , int timeout)
+        {
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipTitle = Title;
+            notifyIcon1.BalloonTipText = Text;
+            notifyIcon1.ShowBalloonTip(timeout);
+        }
+
         private void btnOrder_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
                 MessageBox.Show("Order placed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowNotifyIcon("Pizza Order", "Your order has been placed successfully!", 6000);
                 gbMenue.Enabled = false;
                 btnOrder.Enabled = false;
             }
             else
+            {
+                // Show the notification icon
+                ShowNotifyIcon("Pizza Order", "Check your order and then confirm it!", 6000);
                 MessageBox.Show("Update Your Order", "Update", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
 
         void ResetForm()
@@ -280,7 +297,12 @@ namespace Pizza_Project
             ResetForm();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmPizzaMain();
+            frm.ShowDialog();
+        }
 
-
+        
     }
 }

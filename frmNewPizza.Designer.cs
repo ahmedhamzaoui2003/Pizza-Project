@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbTitle = new System.Windows.Forms.Label();
             this.gbMenue = new System.Windows.Forms.GroupBox();
             this.gbWhereToEat = new System.Windows.Forms.GroupBox();
@@ -60,6 +61,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbToppingsTitle = new System.Windows.Forms.Label();
             this.lbSizeTitle = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.gbMenue.SuspendLayout();
             this.gbWhereToEat.SuspendLayout();
             this.gbToppings.SuspendLayout();
@@ -375,11 +379,10 @@
             // 
             // lbToppings
             // 
-            this.lbToppings.AutoSize = true;
             this.lbToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbToppings.Location = new System.Drawing.Point(55, 129);
             this.lbToppings.Name = "lbToppings";
-            this.lbToppings.Size = new System.Drawing.Size(77, 15);
+            this.lbToppings.Size = new System.Drawing.Size(268, 41);
             this.lbToppings.TabIndex = 6;
             this.lbToppings.Text = "No Toppings";
             // 
@@ -442,11 +445,32 @@
             this.lbSizeTitle.TabIndex = 0;
             this.lbSizeTitle.Text = "Size :";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(97, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Other Project";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.Visible = true;
+            // 
             // frmNewPizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 472);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnOrder);
@@ -505,6 +529,9 @@
         private System.Windows.Forms.Label lbCrustType;
         private System.Windows.Forms.Label lbToppings;
         private System.Windows.Forms.Label lbSize;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.NotifyIcon notifyIcon2;
     }
 }
 
