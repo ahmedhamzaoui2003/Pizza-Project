@@ -215,7 +215,7 @@ namespace Pizza_Project
         
         float CalculateTotalPrice()
         {
-            return GetSelectedSizePrice() + GetSelectedCrustPrice() + GetSelectedToppingsPrice();
+            return numberOfPizzas * (GetSelectedSizePrice() + GetSelectedCrustPrice() + GetSelectedToppingsPrice());
         }
 
         void UpdateTotalPrice()
@@ -236,6 +236,7 @@ namespace Pizza_Project
         private void frmNewPizza_Load(object sender, EventArgs e)
         {
             UpdateOrderSummary();
+            numericUpDown1.Value = 1;
         }
 
 
@@ -243,10 +244,7 @@ namespace Pizza_Project
         private void ShowNotifyIcon(string Title , string Text , int timeout)
         {
             notifyIcon1.Icon = SystemIcons.Application;
-            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-            notifyIcon1.BalloonTipTitle = Title;
-            notifyIcon1.BalloonTipText = Text;
-            notifyIcon1.ShowBalloonTip(timeout);
+            notifyIcon1.ShowBalloonTip(timeout,Title,Text,ToolTipIcon.Info);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -296,13 +294,18 @@ namespace Pizza_Project
         {
             ResetForm();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Form frm = new frmPizzaMain();
             frm.ShowDialog();
         }
 
-        
+        int numberOfPizzas = 1;
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            numberOfPizzas = Convert.ToInt32(numericUpDown1.Value);
+            UpdateTotalPrice();
+        }
     }
 }
